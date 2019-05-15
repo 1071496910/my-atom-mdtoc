@@ -100,6 +100,7 @@ class TocView
     @__initNumbers(mytoc)
     @tocContent = ''
 
+    h = {}
     for i of mytoc.json
       heading = mytoc.json[i]      # loop begin
       level = heading.lvl
@@ -127,7 +128,15 @@ class TocView
 
       if @options.numbering is 1   # use numbers
         @tocContent += @__incNumbers(level)+' '
+      ###
       @tocContent += '['+heading.content+'](#'+@___fixSlugQuirks(heading.slug)+')'
+      ###
+      if isNaN(h[heading.slug])
+        @tocContent += '['+heading.content+'](#'+heading.slug+')'
+        h[heading.slug] = 1
+      else
+        @tocContent += '['+heading.content+'](#'+heading.slug+h[heading.slug]+')'
+        h[heading.slug]++
       @tocContent +='   \n'
 
 
