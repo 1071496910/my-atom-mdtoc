@@ -1,5 +1,5 @@
 {
-  "name": "atom-mdtoc-sef",
+  "name": "my-atom-mdtoc",
   "main": "./lib/atom-mdtoc",
   "version": "0.12.0",
   "description": "Generate a markdown TOC (table of contents) in atom editor using Markdown-TOC and Remarkable from Jon Schlinkert.",
@@ -14,7 +14,7 @@
       "atom-mdtoc:delete"
     ]
   },
-  "repository": "https://github.com/airclear/atom-mdtoc-sef",
+  "repository": "https://github.com/1071496910/my-atom-mdtoc",
   "author": "mcpride (Marco Stolze)",
   "license": "MIT",
   "engines": {
